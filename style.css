@@ -451,6 +451,10 @@ section{
   #menu-icon {
     display: block;
   }
+  .header {
+    position: relative;
+    z-index: 10000;
+  }
 
   .navbar {
     position: absolute;
@@ -463,6 +467,8 @@ section{
     border-bottom: 2px solid var(--main-color);
     border-bottom-left-radius: 2rem;
     display: none;
+    z-index: 9999;
+    
   }
 
   .navbar a {
@@ -470,10 +476,14 @@ section{
     font-size: 2rem;
     margin: 3rem 0;
     color: var(--text-color);
+    
+    
   }
 
 .navbar.active {
   display: block;
+  
+  
 }
 
 .home {
