@@ -1,221 +1,447 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    
-    
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio Website</title>
-    <link rel="stylesheet" href="style.css" />
-    <link
-      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    
-    <header class ="header">
-      <a href = "#home" class="logo"> Sachin
-        <span> Dhakal </span>
-      </a>
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sachin Dhakal — Game Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Bebas+Neue&family=Rajdhani:wght@300;400;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
 
-      <i class ="bx bx-menu" id ="menu-icon"> </i>
+  <!-- ═══════════════════════════════════════════
+       CUSTOM CURSOR
+  ═══════════════════════════════════════════ -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-ring" id="cursor-ring"></div>
 
-      <nav class="navbar">
-      <a href ="#home"> Home </a>
-      <a href ="#about">About </a>
-      <a href ="#projects">Project</a>
-      <a href ="#contact">Contact</a>
-      </nav>
-      </header>
+  <!-- ═══════════════════════════════════════════
+       BACKGROUND ELEMENTS
+  ═══════════════════════════════════════════ -->
+  <div class="grid-bg" aria-hidden="true"></div>
 
-      <section class="home" id="home">
+  <!-- ═══════════════════════════════════════════
+       NAVIGATION
+  ═══════════════════════════════════════════ -->
+  <nav class="navbar" id="navbar">
+    <a href="#hero" class="nav-logo">
+      SD<span class="nav-logo__dot">.</span>DEV
+    </a>
 
-        <div class="home-content">
-          <h1> Hi, It's <span>Sachin</span></h1>
-          <h3>I'm a <span>Game Developer</span></h3>
-          <p>
-            Hello vailog sab thik madi 
-            ok
-            ok
-            ok
-          </p>
-          <div class="social-icons">
-            <a href="https://sachin-maxwell.itch.io/">
-              <i class ="bx bxl-unity"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/sachin-dhakal-0b61b5240/">
-              <i class ="bx bxl-linkedin-square"></i>
-            </a>
-            <a href="https://discord.gg/58xtSudr">
-              <i class ="bx bxl-discord"></i>
-            </a>
-          </div>
-          
-              
-            
-              <div class="btn-group">
-                <a href="#" class="btn">Hire</a>
-                <a href="#contact" class="btn">Contact</a>
-                
-              </div>
-              
-              
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
 
-            </div>
-            <div class="home-img">  
-              <img src ="sach.jpg" class="profileImage" alt="">
-             <img src ="hancy.jpg" class="profileImage" alt="">
-        </div>
-      </section>
-        
-      
-      
-      <section class="about" id="about">
-        <div class="about-img">
-          <img src ="upgrade.png" class="profileImage" alt="">
-          <img src ="about.jpeg" class="profileImage" alt="">
-          </div>
+    <a href="#contact" class="btn btn--cta">Hire Me</a>
+  </nav>
 
-          <div class="about-content">
-            <h2>About <span>Me</span></h2>
-            <p>
-              Hello vailog sab thik madi 
-            ok
-            ok
-            ok
-            ok
-            </p>
-            <a href ="#projects" class="btn"> Projects</a>
-          </div>
-        
+  <!-- ═══════════════════════════════════════════
+       HERO SECTION
+  ═══════════════════════════════════════════ -->
+  <section class="hero" id="hero">
+    <div class="hero__glow" aria-hidden="true"></div>
 
+    <!-- Floating pixel decorations -->
+    <span class="pixel-float pixel-float--1" aria-hidden="true">▲</span>
+    <span class="pixel-float pixel-float--2" aria-hidden="true">◆</span>
+    <span class="pixel-float pixel-float--3" aria-hidden="true">●</span>
+    <span class="pixel-float pixel-float--4" aria-hidden="true">■</span>
+    <span class="pixel-float pixel-float--5" aria-hidden="true">✦</span>
 
+    <div class="hero__avatar">
+      <div class="hero__avatar-inner">SD</div>
+    </div>
 
+    <p class="hero__eyebrow">// Game Developer</p>
 
-        </section>
+    <h1 class="hero__name">
+      SACHIN<br>
+      <span class="hero__name--green">DHAKAL</span>
+    </h1>
 
-        <section class = "projects" id ="projects">
-          <h2 class = "heading"> Projects </h2>
-           
-          <div class="projects-container">
+    <div class="hero__title-tag">
+      Unity · Multiplayer · AI · 3D
+    </div>
 
-            <div class="projects-box">
-              <video class="project-video" muted loop>
-                <source src="dualdestinies.mp4">
-                Your browser does not support the video tag.
-              </video>
-              <div class="projects-info">
-                <img src="astro.png" alt="Project Icon" class="project-icon">
-                <h3>Dual Destinies</h3>
-                <p>
-                  <br>
-                Dive into the unique challenge of 'Dual Destinies' a puzzle game where coordination is key.
-                Control two characters in separate areas, and every move in one triggers the opposite in the other.
-                </p>
-              </div>
-            </div>
+    <p class="hero__desc">
+      I build worlds, systems, and experiences — from multiplayer physics games to AI-driven NPCs.
+      Every project ships with obsessive attention to feel.
+    </p>
 
-            <div class="projects-box">
-              <video class="project-video" muted loop>
-                <source src="thequietend.mp4">
-                Your browser does not support the video tag.
-              </video>
-              <div class="projects-info">
-                <img src="zombie.png" alt="Project Icon" class="project-icon">
-                <h3>The Quiet End</h3>
-                <p>
-                  <br>
-                  In Sound of Silence, noise is your greatest enemy.
-                  Navigate an abandoned lab crawling with the undead, where every footstep, gunshot, and shattering glass could spell doom.
-                </p>
-              </div>
-            </div>
-            
-        
-        <div class = "projects-box">
-          <video class="project-video" muted loop>
-            <source src="car.mp4">
-            Your browser does not support the video tag.
-          </video>
-          <div class = "projects-info">
-            <img src="car.png" alt="Project Icon" class="project-icon">
-              <h3> Nitro Swap</h3>
-              <p><br>
-                Nitro Swap is a high-speed multiplayer racing game where pure velocity meets unpredictable strategy.
-                Race against opponents in fast-paced arenas, using unique abilities.
-              
-              </p>
-          </div>
+    <div class="hero__buttons">
+      <a href="#projects" class="btn btn--primary">See My Work</a>
+      <a href="#contact" class="btn btn--ghost">Get In Touch</a>
+    </div>
+
+    <div class="hero__scroll-hint" aria-hidden="true">
+      <span>Scroll</span>
+      <div class="hero__scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       TICKER BANNER
+  ═══════════════════════════════════════════ -->
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker__track">
+      <span class="ticker__item">UNITY ENGINE <em>✦</em></span>
+      <span class="ticker__item">PHOTON FUSION <em>✦</em></span>
+      <span class="ticker__item">C# DEVELOPER <em>✦</em></span>
+      <span class="ticker__item">MULTIPLAYER NETCODE <em>✦</em></span>
+      <span class="ticker__item">AI &amp; ML-AGENTS <em>✦</em></span>
+      <span class="ticker__item">BLENDER 3D <em>✦</em></span>
+      <span class="ticker__item">CINEMACHINE <em>✦</em></span>
+      <span class="ticker__item">GAME DESIGNER <em>✦</em></span>
+      <!-- Duplicated for seamless loop -->
+      <span class="ticker__item">UNITY ENGINE <em>✦</em></span>
+      <span class="ticker__item">PHOTON FUSION <em>✦</em></span>
+      <span class="ticker__item">C# DEVELOPER <em>✦</em></span>
+      <span class="ticker__item">MULTIPLAYER NETCODE <em>✦</em></span>
+      <span class="ticker__item">AI &amp; ML-AGENTS <em>✦</em></span>
+      <span class="ticker__item">BLENDER 3D <em>✦</em></span>
+      <span class="ticker__item">CINEMACHINE <em>✦</em></span>
+      <span class="ticker__item">GAME DESIGNER <em>✦</em></span>
+    </div>
+  </div>
+
+  <hr class="divider"/>
+
+  <!-- ═══════════════════════════════════════════
+       ABOUT SECTION
+  ═══════════════════════════════════════════ -->
+  <section class="section about" id="about">
+
+    <div class="section__header reveal">
+      <p class="section__label">Who I Am</p>
+      <h2 class="section__title">
+        BUILDING GAMES<br>
+        <span class="section__title--accent">THAT FEEL ALIVE</span>
+      </h2>
+    </div>
+
+    <div class="about__grid">
+
+      <div class="about__text reveal reveal--d1">
+        <p>
+          Hey — I'm <strong>Sachin Dhakal</strong>, a game developer obsessed with crafting
+          experiences that go beyond the screen. I specialise in <em>multiplayer systems</em>,
+          <em>AI behaviour</em>, and <em>tight game mechanics</em>.
+        </p>
+        <p>
+          I work primarily in <strong>Unity</strong>, building everything from real-time networked
+          sports games to stealth-horror FPS titles. I'm comfortable across the full stack —
+          gameplay code, 3D art in Blender, animation rigs, shader work, and cinematic cameras.
+        </p>
+        <p>
+          I've shipped projects during internships at <strong>AppsDoodle Studio</strong> and
+          <strong>FunMotionLabs</strong>, competed in game jams, and built an
+          <strong>adaptive AI enemy system</strong> using ML-Agents for my college project.
+          Every build ships cleaner than the last.
+        </p>
+
+        <div class="tech-chips">
+          <span class="chip">Unity</span>
+          <span class="chip">C#</span>
+          <span class="chip">Photon Fusion</span>
+          <span class="chip">Netcode for GO</span>
+          <span class="chip">Blender</span>
+          <span class="chip">ML-Agents</span>
+          <span class="chip">Cinemachine</span>
+          <span class="chip">ShaderGraph</span>
+          <span class="chip">Git</span>
         </div>
       </div>
 
-
-        </section>
-
-      <section class="contact" id ="contact">
-        <h2 class="heading">Contact <span>Me</span></h2>
-
-        <form action="">
-
-          <div class = "input-group">
-            <div class="input-box">
-              <input type = "text" placeholder = "FullName">
-              <input type = "email" placeholder="Email">
-           </div>
-
-           <div class="input-box">
-            <input type="number" placeholder="PhoneNumber" >
-            <input type ="text" placeholder ="Subject"> 
-            </div>
-          </div>
-
-          <div class="input-group-2">
-            <textarea name ="" id="" cols="30" rows="10" placeholder ="Your Message"></textarea>
-            <input type ="submit" value="Send Message" class="btn">
-
-            
-          </div>
-
-        </form>
-
-
-      </section>
-
-      <footer class="footer">
-        <div class="social-icons">
-          <a href="https://sachin-maxwell.itch.io/">
-            <i class ="bx bxl-unity"></i>
-          </a>
-          <a href="https://www.linkedin.com/in/sachin-dhakal-0b61b5240/">
-            <i class ="bx bxl-linkedin-square"></i>
-          </a>
-          <a href="https://discord.gg/58xtSudr">
-            <i class ="bx bxl-discord"></i>
-          </a>
+      <div class="about__stats reveal reveal--d2">
+        <div class="stat-box">
+          <div class="stat-box__num">10+</div>
+          <div class="stat-box__label">Projects Shipped</div>
         </div>
-        <ul class="list">
-          <li>
-            <a href ="#projects">Projects</a>
-          </li>
+        <div class="stat-box">
+          <div class="stat-box__num">3+</div>
+          <div class="stat-box__label">Years in Unity</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-box__num">2</div>
+          <div class="stat-box__label">Internships</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-box__num">∞</div>
+          <div class="stat-box__label">Bugs Fixed</div>
+        </div>
+      </div>
 
-          <li>
-            <a href ="#about">About Me</a>
-          </li>
+    </div>
+  </section>
 
-          <li>
-            <a href ="#contact">Contact</a>
-          </li>
-        </ul>
+  <hr class="divider"/>
 
-      </footer>
-      
+  <!-- ═══════════════════════════════════════════
+       PROJECTS SECTION
+  ═══════════════════════════════════════════ -->
+  <section class="section projects" id="projects">
 
+    <div class="section__header reveal">
+      <p class="section__label">My Work</p>
+      <h2 class="section__title">
+        FEATURED <span class="section__title--accent">PROJECTS</span>
+      </h2>
+    </div>
 
+    <div class="projects__grid">
 
+      <!-- Project 1: Gilli Danda -->
+      <article class="project-card project-card--c1 reveal reveal--d1">
+        <div class="project-card__bg" aria-hidden="true"></div>
+        <span class="project-card__corner project-card__corner--tl" aria-hidden="true"></span>
+        <span class="project-card__corner project-card__corner--br" aria-hidden="true"></span>
+        <div class="project-card__body">
+          <span class="project-card__number" aria-hidden="true">01</span>
+          <span class="project-card__icon">🏏</span>
+          <span class="project-card__tag">// Multiplayer · Sports · Physics</span>
+          <h3 class="project-card__name">Gilli Danda</h3>
+          <p class="project-card__desc">
+            A real-time multiplayer reimagining of the classic South Asian street sport. Features
+            two distinct player roles — Batter and Fielder — AI fielder placement with
+            trajectory-based catch prediction, Cinemachine camera switching, and host-mode
+            networking built entirely on Photon Fusion.
+          </p>
+          <div class="project-card__tags">
+            <span class="ptag">Photon Fusion</span>
+            <span class="ptag">Host Mode</span>
+            <span class="ptag">AI Fielding</span>
+            <span class="ptag">Cinemachine</span>
+          </div>
+          <a href="#" class="project-card__link">View Project</a>
+        </div>
+      </article>
 
+      <!-- Project 2: Sound of Silence -->
+      <article class="project-card project-card--c2 reveal reveal--d2">
+        <div class="project-card__bg" aria-hidden="true"></div>
+        <span class="project-card__corner project-card__corner--tl" aria-hidden="true"></span>
+        <span class="project-card__corner project-card__corner--br" aria-hidden="true"></span>
+        <div class="project-card__body">
+          <span class="project-card__number" aria-hidden="true">02</span>
+          <span class="project-card__icon">🔇</span>
+          <span class="project-card__tag">// FPS · Stealth · Horror</span>
+          <h3 class="project-card__name">Sound of Silence</h3>
+          <p class="project-card__desc">
+            A tense first-person survival game where sound is your biggest enemy. Navigate a
+            zombie-infested world using a real-time sound meter, suppressor mechanics, and a
+            hidden soundproof safe room. Stay quiet, stay alive.
+          </p>
+          <div class="project-card__tags">
+            <span class="ptag">FPS</span>
+            <span class="ptag">Stealth</span>
+            <span class="ptag">Sound System</span>
+            <span class="ptag">AI Enemies</span>
+          </div>
+          <a href="#" class="project-card__link">View Project</a>
+        </div>
+      </article>
 
+      <!-- Project 3: Dual Destinies -->
+      <article class="project-card project-card--c3 reveal reveal--d1">
+        <div class="project-card__bg" aria-hidden="true"></div>
+        <span class="project-card__corner project-card__corner--tl" aria-hidden="true"></span>
+        <span class="project-card__corner project-card__corner--br" aria-hidden="true"></span>
+        <div class="project-card__body">
+          <span class="project-card__number" aria-hidden="true">03</span>
+          <span class="project-card__icon">⚔️</span>
+          <span class="project-card__tag">// Action · [Add Genre]</span>
+          <h3 class="project-card__name">Dual Destinies</h3>
+          <p class="project-card__desc">
+            Two paths. One world. [Add your description here — what makes this game unique,
+            what mechanics drive it, and what experience you built for the player.]
+          </p>
+          <div class="project-card__tags">
+            <span class="ptag">Unity</span>
+            <span class="ptag">[Tag]</span>
+            <span class="ptag">[Tag]</span>
+          </div>
+          <a href="#" class="project-card__link">View Project</a>
+        </div>
+      </article>
 
-    <script src="script.js"></script>
-  </body>
+      <!-- Project 4: Nitro Swap -->
+      <article class="project-card project-card--c4 reveal reveal--d2">
+        <div class="project-card__bg" aria-hidden="true"></div>
+        <span class="project-card__corner project-card__corner--tl" aria-hidden="true"></span>
+        <span class="project-card__corner project-card__corner--br" aria-hidden="true"></span>
+        <div class="project-card__body">
+          <span class="project-card__number" aria-hidden="true">04</span>
+          <span class="project-card__icon">🏎️</span>
+          <span class="project-card__tag">// Multiplayer · Racing · Arcade</span>
+          <h3 class="project-card__name">Nitro Swap</h3>
+          <p class="project-card__desc">
+            Ability-fuelled multiplayer racing chaos. One driver is "it" in the signature
+            Swap Tag game mode — race, dodge, and tag opponents to ditch the hot seat.
+            Built with Unity Netcode for GameObjects with a confirmed working swap system.
+          </p>
+          <div class="project-card__tags">
+            <span class="ptag">Netcode for GO</span>
+            <span class="ptag">Swap Tag Mode</span>
+            <span class="ptag">Abilities</span>
+          </div>
+          <a href="#" class="project-card__link">View Project</a>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <hr class="divider"/>
+
+  <!-- ═══════════════════════════════════════════
+       SKILLS SECTION
+  ═══════════════════════════════════════════ -->
+  <section class="section skills" id="skills">
+
+    <div class="section__header reveal">
+      <p class="section__label">Expertise</p>
+      <h2 class="section__title">
+        SKILLS &amp; <span class="section__title--accent">TECH STACK</span>
+      </h2>
+    </div>
+
+    <div class="skills__grid">
+
+      <div class="skill-card skill-card--c1 reveal reveal--d1">
+        <div class="skill-card__glow" aria-hidden="true"></div>
+        <span class="skill-card__icon">🎮</span>
+        <h3 class="skill-card__name">Game Development</h3>
+        <p class="skill-card__list">
+          Unity Engine · C# · Game Mechanics · Physics Systems · Animator Controllers · ScriptableObjects
+        </p>
+      </div>
+
+      <div class="skill-card skill-card--c2 reveal reveal--d2">
+        <div class="skill-card__glow" aria-hidden="true"></div>
+        <span class="skill-card__icon">🌐</span>
+        <h3 class="skill-card__name">Multiplayer Networking</h3>
+        <p class="skill-card__list">
+          Photon Fusion · Unity Netcode for GameObjects · Host Mode · State Sync · RPCs · Lag Handling
+        </p>
+      </div>
+
+      <div class="skill-card skill-card--c3 reveal reveal--d3">
+        <div class="skill-card__glow" aria-hidden="true"></div>
+        <span class="skill-card__icon">🤖</span>
+        <h3 class="skill-card__name">AI &amp; NPC Systems</h3>
+        <p class="skill-card__list">
+          Unity ML-Agents · Imitation Learning · Behaviour Trees · Navmesh · Custom AI Controllers
+        </p>
+      </div>
+
+      <div class="skill-card skill-card--c4 reveal reveal--d1">
+        <div class="skill-card__glow" aria-hidden="true"></div>
+        <span class="skill-card__icon">🎨</span>
+        <h3 class="skill-card__name">3D Art &amp; Environments</h3>
+        <p class="skill-card__list">
+          Blender · Multi-point Lighting · UV Mapping · Import Pipelines · Collider Setup · ShaderGraph
+        </p>
+      </div>
+
+      <div class="skill-card skill-card--c5 reveal reveal--d2">
+        <div class="skill-card__glow" aria-hidden="true"></div>
+        <span class="skill-card__icon">🎬</span>
+        <h3 class="skill-card__name">Cameras &amp; Cinematics</h3>
+        <p class="skill-card__list">
+          Cinemachine · Camera Blending · Cinematic Intros · Avatar Masks · Animator Layers
+        </p>
+      </div>
+
+      <div class="skill-card skill-card--c6 reveal reveal--d3">
+        <div class="skill-card__glow" aria-hidden="true"></div>
+        <span class="skill-card__icon">📱</span>
+        <h3 class="skill-card__name">Content Creation</h3>
+        <p class="skill-card__list">
+          Gameplay Videos · Devlogs · Reels · Genre-mixing Edits · Screen Capture · Video Production
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <hr class="divider"/>
+
+  <!-- ═══════════════════════════════════════════
+       CONTACT SECTION
+  ═══════════════════════════════════════════ -->
+  <section class="section contact" id="contact">
+
+    <div class="section__header reveal">
+      <p class="section__label">Let's Talk</p>
+      <h2 class="section__title">
+        GET IN <span class="section__title--accent">TOUCH</span>
+      </h2>
+    </div>
+
+    <div class="contact__grid">
+
+      <div class="contact__info reveal reveal--d1">
+        <h3 class="contact__info-heading">Open to opportunities &amp; collabs</h3>
+        <p class="contact__info-body">
+          Whether you need a Unity developer, a multiplayer system built from scratch,
+          or just want to talk game design — I'm all in. Let's make something great.
+        </p>
+
+        <nav class="social-links" aria-label="Social links">
+          <a href="https://linkedin.com/in/sachindhakal" target="_blank" rel="noopener" class="social-link">
+            <span class="social-link__icon">in</span>
+            LinkedIn — Sachin Dhakal
+          </a>
+          <a href="https://sachindhakal.itch.io" target="_blank" rel="noopener" class="social-link">
+            <span class="social-link__icon">▶</span>
+            itch.io — Play My Games
+          </a>
+          <a href="mailto:sachin@example.com" class="social-link">
+            <span class="social-link__icon">@</span>
+            sachin@example.com
+          </a>
+        </nav>
+      </div>
+
+      <form class="contact__form reveal reveal--d2" id="contact-form" novalidate>
+        <div class="form-group">
+          <label for="name" class="form-group__label">Your Name</label>
+          <input type="text" id="name" name="name" class="form-group__input" placeholder="Player One" required/>
+        </div>
+        <div class="form-group">
+          <label for="email" class="form-group__label">Email</label>
+          <input type="email" id="email" name="email" class="form-group__input" placeholder="you@studio.com" required/>
+        </div>
+        <div class="form-group">
+          <label for="message" class="form-group__label">Message</label>
+          <textarea id="message" name="message" class="form-group__textarea" rows="5" placeholder="Tell me about your project or idea..." required></textarea>
+        </div>
+        <button type="submit" class="btn btn--send">Send It →</button>
+      </form>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="footer__name">
+      SACHIN <span>DHAKAL</span><br>GAME DEV
+    </div>
+    <p class="footer__copy">© 2025 Sachin Dhakal. All rights reserved.</p>
+    <nav class="footer__links" aria-label="Footer navigation">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
 </html>
